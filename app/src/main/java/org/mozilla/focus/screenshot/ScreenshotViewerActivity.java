@@ -53,6 +53,7 @@ import java.text.DecimalFormat;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.Locale;
 
 import static com.davemorrissey.labs.subscaleview.SubsamplingScaleImageView.PAN_LIMIT_INSIDE;
 import static com.davemorrissey.labs.subscaleview.SubsamplingScaleImageView.SCALE_TYPE_CENTER_CROP;
@@ -84,7 +85,7 @@ public class ScreenshotViewerActivity extends LocaleAwareAppCompatActivity imple
     }
 
     private static final String EXTRA_SCREENSHOT = "extra_screenshot";
-    private final SimpleDateFormat sSdfInfoTime = new SimpleDateFormat("MMM dd, yyyy");
+    private final SimpleDateFormat sSdfInfoTime = new SimpleDateFormat("MMM dd, yyyy", Locale.getDefault());
 
     private Toolbar mBottomToolBar;
     private ImageView mImgPlaceholder;
